@@ -5,12 +5,13 @@
 ## 能做什么
 
 - 审计 macOS 系统代理、环境变量、npm、Git、Homebrew 和 Claude Code 设置；
+- 按用户文章说明 Claude Code 会读取、发送和保存什么，并逐项执行完整流程；
 - 区分代理配置、登录状态、历史记录与缓存，避免误删 `~/.claude`；
 - 在 AWS Lightsail 或 Ubuntu VPS 部署、修复 Hysteria 2；
 - 生成 `hysteria2://` 分享链接和 Clash/Mihomo YAML；
 - 配置并验证 TUN、DNS、公网出口和断网回退；
 - 排查静态 IP、UDP 443、TLS、SNI、Karing 导入失效等问题；
-- 检查邮件远程内容与浏览器隐私设置。
+- 说明使用保密程度高的邮箱和指纹浏览器，不推荐具体产品。
 
 ## 安装
 
@@ -68,7 +69,6 @@ python3 scripts/render_hysteria2_client.py \
 
 - 仅操作用户拥有或获得授权的设备、账号和服务器；
 - 不承诺通过 IP、时区、TLS 或缓存清理规避平台审核；
-- 不伪造所在地、身份、支付资料或设备信息；
 - 不在聊天、日志或 Git 中输出私钥、密码、令牌和完整节点链接；
 - 修改前备份，切换 TUN 前准备恢复入口和回退方法。
 

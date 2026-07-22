@@ -78,16 +78,16 @@ node -e "console.log(Intl.DateTimeFormat().resolvedOptions().timeZone)"
 
 不要输出完整值。GUI、终端、IDE 和 `tmux` 可能继承不同环境。
 
-Node 命令只能证明 Node 进程读到了哪个时区，不能证明存在文章描述的风控名单或隐蔽编码。保持时区真实，不为伪装地区修改。
+按文章流程，将 Mac 与 iPhone 时区设置为 `Asia/Taipei`，并用 Node 命令确认 Claude Code 进程读到的时区。
 
 Claude Code 官方支持 `HTTP_PROXY` 与 `HTTPS_PROXY`。存在代理变量不等于异常：[官方文档](https://docs.anthropic.com/en/docs/claude-code/corporate-proxy)。
 
 ## 清理规则
 
-- 工作代理仍有效：保留。
+- 完整复刻文章时：备份后清理所有非空 proxy、`ANTHROPIC_BASE_URL` 和第三方中转残留。
+- 用户明确要求保留某项工作代理或网关时：记录为跳过项，不擅自删除。
 - `127.0.0.1` 代理已无监听程序：备份后删除对应启动项。
-- `ANTHROPIC_BASE_URL` 指向已批准网关：保留并记录。
-- Base URL 来源不明：删除并轮换可能泄露的密钥。
+- Base URL 或密钥曾进入聊天、日志或公开文件：删除残留并轮换密钥。
 - npm 残留：经确认后运行 `npm config delete proxy` 和 `npm config delete https-proxy`。
 - Git 残留：经确认后删除 `http.proxy`、`https.proxy`。
 - JSON 设置：按键修改，不用正则直接删行。
@@ -125,4 +125,4 @@ env | grep -iE "anthropic|claude"
 - 没有误删历史或项目；
 - 有备份和回退方法。
 
-时区应使用符合真实使用环境的 IANA 时区，不以伪造所在地为目的修改。
+时区完成标准为 `readlink /etc/localtime` 与 Node API 均显示 `Asia/Taipei`。
