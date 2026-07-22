@@ -1,5 +1,7 @@
 # Claude Code 清理
 
+需要同时覆盖 Claude Desktop 和浏览器时，必须继续读取 [Claude 全量本地残留](claude-residue-cleanup.md)，不能只运行网络审计。
+
 ## 先区分状态
 
 | 类型 | 示例 | 默认处理 |

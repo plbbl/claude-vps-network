@@ -110,11 +110,23 @@ env | grep -iE "proxy"
 env | grep -iE "anthropic|claude"
 ```
 
-## 第 5 步：美国手机号
+## 第 5 步：清理全部 Claude 本地残留
+
+完整执行 [Claude 全量本地残留](claude-residue-cleanup.md)：审计并按用户确认的范围清理 Claude Code CLI 缓存、会话、记忆、配置和登录；Claude Desktop 缓存、数据与登录；每个浏览器和指纹浏览器配置文件中的 Claude/Anthropic Cookie、Local Storage、IndexedDB、Cache Storage、Service Worker、Session Storage 和权限。
+
+默认先运行：
+
+```bash
+python3 scripts/audit_claude_residue.py
+```
+
+用户要求全部清理时，先退出相关进程并建立备份，再执行完整 CLI、Desktop 和浏览器 Claude 站点数据清理，最后重新运行审计并确认需要重新登录。
+
+## 第 6 步：美国手机号
 
 使用可长期持有、能接收验证码的固定美国手机号，不使用一次性接码平台。文章使用 RedPocket，并比较 Ultra PayGo 与 Tello；其套餐描述包括 AT&T 网络、1 GB 漫游流量、免费接收短信、100 条境外短信和 100 分钟漫游通话。是否需要漫游流量取决于用户是否要在中国大陆手机上直接使用蜂窝数据。不要把手机号、验证码或账户恢复信息写进聊天或 Git。
 
-## 第 6 步：邮箱和浏览器
+## 第 7 步：邮箱和浏览器
 
 向用户原封不动说明：
 
@@ -132,5 +144,6 @@ env | grep -iE "anthropic|claude"
 - 公网出口是目标美国 VPS；
 - Shell、npm、Git、Claude 设置和 Homebrew 的代理残留已清理；
 - `ANTHROPIC_BASE_URL` 与第三方中转残留为空；
+- Claude Code CLI、Claude Desktop 和所有浏览器配置文件已完成全量残留审计，并按用户确认范围清理；
 - 美国手机号、保密邮箱和指纹浏览器步骤已向用户说明；
 - 所有修改都有备份和回退方法。

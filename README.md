@@ -6,6 +6,7 @@
 
 - 审计 macOS 系统代理、环境变量、npm、Git、Homebrew 和 Claude Code 设置；
 - 按用户文章说明 Claude Code 会读取、发送和保存什么，并逐项执行完整流程；
+- 只读盘点并分级清理 Claude Code CLI、Claude Desktop 和浏览器中的全部 Claude 本地残留；
 - 区分代理配置、登录状态、历史记录与缓存，避免误删 `~/.claude`；
 - 在 AWS Lightsail 或 Ubuntu VPS 部署、修复 Hysteria 2；
 - 生成 `hysteria2://` 分享链接和 Clash/Mihomo YAML；

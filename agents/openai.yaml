@@ -1,4 +1,4 @@
 interface:
   display_name: "Claude VPS 网络"
-  short_description: "按文章审计 Claude Code 网络并配置 VPS、TUN 与客户端"
-  default_prompt: "使用 $claude-vps-network 严格按我提供的文章说明 Claude Code 行为并完成全部网络配置。"
+  short_description: "清理 Claude CLI、Desktop、浏览器残留并配置 VPS/TUN"
+  default_prompt: "使用 $claude-vps-network 按文章审计并清理 Claude CLI、Desktop 和浏览器全部残留，再完成 VPS 与 TUN 配置。"
