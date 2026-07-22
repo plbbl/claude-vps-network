@@ -1,4 +1,4 @@
-# Claude Code VPS 网络配置 Skill
+# Claude VPS 网络
 
 一个面向 Codex 的中文 Skill，用于审计 Claude Code 网络配置、清理失效代理残留、部署私人 Hysteria 2 节点，并生成 Clash/Mihomo 与 Karing 客户端配置。
 
@@ -15,8 +15,8 @@
 ## 安装
 
 ```bash
-git clone https://github.com/plbbl/configure-claude-code-vps-network.git \
-  ~/.codex/skills/configure-claude-code-vps-network
+git clone https://github.com/plbbl/claude-vps-network.git \
+  ~/.codex/skills/claude-vps-network
 ```
 
 重启 Codex，使其重新加载 Skill。
@@ -26,7 +26,7 @@ git clone https://github.com/plbbl/configure-claude-code-vps-network.git \
 直接对 Codex 说：
 
 ```text
-使用 $configure-claude-code-vps-network 审计我的 Claude Code 网络配置。
+使用 $claude-vps-network 审计我的 Claude Code 网络配置。
 ```
 
 也可以提出具体任务：

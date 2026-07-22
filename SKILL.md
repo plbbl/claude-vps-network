@@ -1,9 +1,9 @@
 ---
-name: configure-claude-code-vps-network
+name: claude-vps-network
 description: 审计并清理 Claude Code 的代理、环境变量和 Base URL 残留；检查时区暴露、邮件远程内容与浏览器隐私；在 AWS Lightsail 或 Ubuntu VPS 部署、修复 Hysteria 2；生成 Clash/Mihomo 与 Karing 配置；配置 TUN、验证出口并准备回退。适用于“清理 CC 网络配置”“检查邮件追踪”“搭建私人 VPS 节点”“导入 hysteria2 链接”“排查静态 IP、UDP 443、TLS、Karing 失效或 TUN 断网”等请求。
 ---
 
-# Claude Code VPS 网络配置
+# Claude VPS 网络
 
 建立可验证、可回退的私人网络。把技术事实与“防封”“不可检测”等未经证实的说法分开。
 
