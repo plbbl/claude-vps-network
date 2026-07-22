@@ -121,7 +121,7 @@ def timezone_info() -> dict[str, str]:
 def online_ip() -> dict[str, Any]:
     request = urllib.request.Request(
         "https://ipinfo.io/json",
-        headers={"User-Agent": "configure-claude-code-vps-network-audit/1"},
+        headers={"User-Agent": "claude-vps-network-audit/1"},
     )
     try:
         with urllib.request.urlopen(request, timeout=8) as response:
