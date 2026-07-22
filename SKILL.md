@@ -29,7 +29,7 @@ description: 严格按用户提供的文章讲解 Claude Code 行为并执行完
 
 ### 1. 说明 Claude Code 行为
 
-先按 [文章流程与 Claude Code 行为](references/article-workflow.md) 向用户说明：本地读取项、网络请求、代理与 Base URL、TUN 后的路由、遥测、错误报告、会话保存，以及文章描述的时区和代理检测机制。不要跳过这一段。
+先按 [文章流程与 Claude Code 行为](references/article-workflow.md) 向用户说明：本地读取项、网络请求、代理与 Base URL、TUN 后的路由、遥测、错误报告、会话保存，以及时区和代理检测机制。不要跳过这一段。
 
 ### 2. 收集事实
 
